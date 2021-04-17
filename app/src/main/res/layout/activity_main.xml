@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:background="@drawable/splashbg2"
+    android:alpha="1"
+    tools:context=".activity.MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/AppTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:elevation="4dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navView"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header"
+        android:theme="@style/NavigationView"
+        android:layout_gravity="start"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="#FFFFFF"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        app:cardElevation="30dp"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="50dp"
+        app:cardBackgroundColor="#6f4a8e"
+        android:alpha="1"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/layout_bg"
+            android:backgroundTint="#FFF"
+            android:alpha="0.95">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieTut"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="kidwithbook.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/tvTut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:padding="5dp"
+                android:text="Tutorial"
+                android:textSize="30sp"
+                android:textColor="#6f4a8e"
+                android:textAlignment="center"
+                android:textStyle="bold|italic"
+                />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardRhymes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineSpotShadowColor="#FFFFFF"
+        android:outlineAmbientShadowColor="#FFFFFF"
+        app:cardElevation="30dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_below="@id/cardTut"
+        app:cardBackgroundColor="#6f4a8e"
+        android:alpha="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/layout_bg"
+            android:backgroundTint="#FFF"
+            android:alpha="0.95">
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieRhymes"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="kid.json"
+                app:lottie_loop="true" />
+
+
+            <TextView
+                android:id="@+id/tvRhymes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/annie_use_your_telescope"
+                android:padding="5dp"
+                android:text="Rhymes"
+                android:textAlignment="center"
+                android:textColor="#6f4a8e"
+                android:textSize="30sp"
+                android:textStyle="bold|italic" />
+
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+        <!--<com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="ca-app-pub-7324937564781573/1448053397" />-->
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
